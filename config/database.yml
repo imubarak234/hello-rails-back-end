@@ -17,13 +17,17 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: localhost
+  port: 5432
+  username: mb
+  password: 123456789
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: hello_rails_back_end_development
+  database: greetings_react
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +61,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: hello_rails_back_end_test
+  database: greetings_react_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +85,6 @@ test:
 #
 production:
   <<: *default
-  database: hello_rails_back_end_production
-  username: hello_rails_back_end
-  password: <%= ENV["HELLO_RAILS_BACK_END_DATABASE_PASSWORD"] %>
+  database: greetings_react
+  username: mb
+  password: <%= ENV["GREETINGS_REACT_PASSWORD"] %>
