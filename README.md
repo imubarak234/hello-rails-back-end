@@ -2,6 +2,9 @@
 
 > Hello Rails Back-end acts a simple Rest API endpoint that renders random greeting. This greeting are available at stated url.
 
+## Link to front-end React app
+[React](https://github.com/imubarak234/hello-react-front-end)
+
 
 ## Built With
 
